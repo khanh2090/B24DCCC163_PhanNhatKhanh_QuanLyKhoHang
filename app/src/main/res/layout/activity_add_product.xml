@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnBackTop"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/navigate_up"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/FieldLabel" android:layout_marginTop="0dp"
+                android:text="@string/label_name" />
+            <EditText android:id="@+id/edtName" style="@style/InputBox"
+                android:hint="@string/hint_name" android:inputType="textCapSentences" />
+
+            <TextView style="@style/FieldLabel" android:text="@string/label_price" />
+            <EditText android:id="@+id/edtPrice" style="@style/InputBox"
+                android:hint="@string/hint_price" android:inputType="number" />
+
+            <TextView style="@style/FieldLabel" android:text="@string/label_quantity" />
+            <EditText android:id="@+id/edtQuantity" style="@style/InputBox"
+                android:hint="@string/hint_quantity" android:inputType="number" />
+
+            <TextView style="@style/FieldLabel" android:text="@string/label_category" />
+            <Spinner
+                android:id="@+id/spCategory"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input"
+                android:entries="@array/categories" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swActive"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:text="@string/label_active"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <TextView style="@style/FieldLabel" android:text="@string/label_description" />
+            <EditText android:id="@+id/edtDescription" style="@style/InputBox"
+                android:gravity="top|start" android:hint="@string/hint_description"
+                android:inputType="textMultiLine" android:minLines="3" android:paddingTop="12dp" />
+
+            <Button android:id="@+id/btnSave" style="@style/PrimaryButton"
+                android:layout_marginTop="20dp" android:text="@string/btn_save" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

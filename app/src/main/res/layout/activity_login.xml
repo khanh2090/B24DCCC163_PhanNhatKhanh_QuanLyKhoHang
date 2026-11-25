@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_avatar"
+            android:backgroundTint="@color/primary"
+            android:gravity="center"
+            android:text="@string/logo_text"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:text="@string/login_title"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:text="@string/login_subtitle"
+            android:textColor="@color/text_secondary" />
+
+        <TextView style="@style/FieldLabel" android:text="@string/label_username" />
+
+        <EditText
+            android:id="@+id/edtUsername"
+            style="@style/InputBox"
+            android:hint="@string/hint_username"
+            android:inputType="text" />
+
+        <TextView style="@style/FieldLabel" android:text="@string/label_password" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            style="@style/InputBox"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/error"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/sample_account"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>
